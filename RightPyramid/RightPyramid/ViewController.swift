@@ -16,7 +16,7 @@ class ViewController: UIViewController {
 //        rightPyramid(number: 10)
 //        leftPyramid(number: 9)
 //        triangle(number: 10)
-          downArrow(number: 10)
+         // downArrow(number: 10)
         
     }
     
