@@ -9,6 +9,8 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    
+    let targetValue = 18 // change value
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -16,7 +18,12 @@ class ViewController: UIViewController {
 //        rightPyramid(number: 10)
 //        leftPyramid(number: 9)
 //        triangle(number: 10)
-         // downArrow(number: 10)
+          downArrow(number: 10)
+        let numArray = [3,7,11,15,12,7]
+        
+        //Output: [0,1]
+            
+      //   someMethod(array: numArray)
         
     }
     
@@ -51,17 +58,40 @@ class ViewController: UIViewController {
         print("===========================================")
     }
     
-    func triangle(number:Int) {
+//    func triangle(number:Int) {
+//
+//        for i in 1 ..< number {
+//            for j in stride(from: number, to: i, by: -1){
+//                print(terminator: " ")
+//            }
+//
+//            for k in 0 ... i-1{
+//                print("*",terminator: " ")
+//            }
+//            print("")
+//        }
+//    }
+
+    func downArrow(number:Int){
+        let q1 = DispatchQueue(label: "label")
+        let q2 = DispatchQueue(label: "label2")
+       
+        
+    }
+    //MARK: - Equilent 2 numbers in Array
     
-        for i in 1 ..< number {
-            for j in stride(from: number, to: i, by: -1){
-                print(terminator: " ")
+    func someMethod(array:[Int]) {
+        for  i in 0...array.count {
+            
+            for j in  i ..< array.count {
+                if ((array[i]) + (array[j])) == targetValue
+                {
+                    print(array[i],array[j])
+                }else{
+                    
+                }
             }
             
-            for k in 0 ... i-1{
-                print("*",terminator: " ")
-            }
-            print("")
         }
     }
 
