@@ -19,7 +19,7 @@ class ViewController: UIViewController {
 //        leftPyramid(number: 9)
 //        triangle(number: 10)
           downArrow(number: 10)
-        let numArray = [3,7,11,15,12,7]
+          singleArray()
         
         //Output: [0,1]
             
@@ -93,6 +93,25 @@ class ViewController: UIViewController {
             }
             
         }
+    }
+    
+    
+    // multi array with different datatype 
+    func singleArray() {
+        
+        var multiarray  = [1,2 ,[3,5],55,["3"]] as [Any]
+        
+        let  singleArray = multiarray.flatMap{ elements -> [Any] in
+            
+            if let values = elements as? [Any] {
+                return values
+            }else{
+                return [elements]
+            }
+        }
+        
+        print(singleArray)
+        
     }
 
 }
